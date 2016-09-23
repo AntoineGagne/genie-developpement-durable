@@ -161,8 +161,9 @@
             \today
         \end{center}
 %
-    \clearpage%
-    \let\maketitle\relax%
+        \clearpage%
+        \let\maketitle\relax%
+    \end{titlepage}
 }
 
 % Definition of the functions to set the title page parameters
