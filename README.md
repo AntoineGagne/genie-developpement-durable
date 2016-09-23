@@ -1,2 +1,3 @@
-# genie-developpement-durable
-Projet de session du cours ' Génie et développement durable'
+# Génie et développement durable
+
+Ce dépot `git` contient le projet de session du cours *Génie et développement durable*.
