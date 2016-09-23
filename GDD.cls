@@ -73,10 +73,13 @@
 % Definition of the page's dimensions (package `geometry`)
 \geometry{letterpaper,%
           centering,%
-          hmargin={2.5cm,2.5cm},%
-          vmargin={2.5cm,2.5cm},%
+          hmargin={3cm,3cm},%
+          vmargin={3cm,3cm},%
           heightrounded,%
           includehead}
+
+% Set the interline size
+\renewcommand{\baselinestretch}{1.5} 
 
 % Package `caption` used for:
 %    - Redefinition of the separation character in the legends as `babel` defines it
