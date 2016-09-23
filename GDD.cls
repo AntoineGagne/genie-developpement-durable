@@ -30,7 +30,7 @@
 % --------------------------------------------------------------------------------------
 % -------------------------------- Execution of options --------------------------------
 % --------------------------------------------------------------------------------------
-\ProcessOptions \relax
+\ProcessOptions\relax
 
 
 % --------------------------------------------------------------------------------------
@@ -180,8 +180,8 @@
 
 % Definition of the function to create the abstract
 \def\makeabstract{%
-    \begin{abstract}
-        \theabstract
+    \begin{abstract}%
+        \theabstract%
     \end{abstract}
 }
 
@@ -199,8 +199,8 @@
         }%
 
 \def\makethanks{%
-    \begin{acknowledgments}
-        \thethanks
+    \begin{acknowledgments}%
+        \thethanks%
     \end{acknowledgments}
 }
 
@@ -211,23 +211,23 @@
 \setcounter{secnumdepth}{3}         % default = 2
 
 % Defines the highlighting for the programming languages
-\lstdefinestyle{custom}{
-  basicstyle=\footnotesize\ttfamily,
-  belowcaptionskip=1\baselineskip,
-  breaklines=true,
-  captionpos=b,
-  commentstyle=\ttfamily\color{gray},
-  identifierstyle=\color{blue},
-  keywordstyle=\bfseries\color{green!40!black},
-  language=Python,
-  numbers=left,
-  numbersep=0.5pt,
-  showstringspaces=false,
-  showtabs=false,
-  stepnumber=1,
-  stringstyle=\color{orange},
-  tabsize=4,
-  xleftmargin=\parindent,
+\lstdefinestyle{custom}{%
+    basicstyle=\footnotesize\ttfamily,
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    captionpos=b,
+    commentstyle=\ttfamily\color{gray},
+    identifierstyle=\color{blue},
+    keywordstyle=\bfseries\color{green!40!black},
+    language=Python,
+    numbers=left,
+    numbersep=0.5pt,
+    showstringspaces=false,
+    showtabs=false,
+    stepnumber=1,
+    stringstyle=\color{orange},
+    tabsize=4,
+    xleftmargin=\parindent,
 }
 
 % Defines the UTF8 characters and their associated values
@@ -313,7 +313,7 @@
 % Redefine the appendix page numbering format
 \let\origappendix\appendix
 \renewcommand\appendix{%
-    \origappendix
+    \origappendix%
     \pretocmd{\chapter}{%
       \clearpage
       \pagenumbering{arabic}%

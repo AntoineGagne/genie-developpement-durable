@@ -8,5 +8,8 @@ compile_pdf: create_build_dir
 create_build_dir:
 	mkdir -p build
 
+check: create_build_dir
+	find . -name *.tex -exec chktex {} \; | tee build/lint.out
+
 clean:
 	rm -r build

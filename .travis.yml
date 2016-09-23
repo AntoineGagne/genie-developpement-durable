@@ -1,0 +1,9 @@
+install:
+    - sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended 
+    - sudo apt-get install chktex
+
+script:
+    - make
+    - make check
+    # If lint output is non-empty report an error.
+    - test ! -s build/lint.out
