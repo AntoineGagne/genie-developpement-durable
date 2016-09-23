@@ -53,6 +53,7 @@
 \RequirePackage{listings}
 \RequirePackage{lmodern}
 \RequirePackage{longtable}
+\RequirePackage{mathptmx}
 \RequirePackage{ragged2e}
 \RequirePackage{rotating}
 \RequirePackage{tabularx}
