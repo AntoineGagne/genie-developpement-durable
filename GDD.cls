@@ -117,10 +117,10 @@
     \og%
 }%
 {%
-    \fg%
     \IfNoValueTF{#2}%
         {\footfullcite{#1}}%
         {\footfullcite[#2]{#1}}%
+    \fg%
     \endorigquotation%
 }
 
