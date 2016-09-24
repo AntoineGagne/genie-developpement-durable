@@ -1,4 +1,4 @@
-# Génie et développement durable
+# Génie et développement durable [![Build Status](https://travis-ci.com/AntoineGagne/genie-developpement-durable.svg?token=z8MuAdp4BiCLDyKa2y46&branch=master)](https://travis-ci.com/AntoineGagne/genie-developpement-durable)
 
 Ce dépot `git` contient le projet de session du cours *Génie et développement durable*.
 
