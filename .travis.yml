@@ -1,5 +1,4 @@
 install:
-    - sudo dpkg --install <(wget --quiet --output-document=- http://old-releases.ubuntu.com/ubuntu/pool/universe/b/biber/biber_0.9.9+release-1_all.deb)
     - sudo apt-get install texlive-latex-recommended 
                            texlive-latex-extra 
                            texlive-fonts-recommended 
@@ -7,7 +6,6 @@ install:
     - sudo apt-get install chktex
 
 script:
-    - make
     - make check
     # If lint output is non-empty report an error.
     - test ! -s build/lint.out
