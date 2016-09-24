@@ -269,7 +269,7 @@
 \AtBeginDocument{%
    \hypersetup{pdftitle={\@title},%
                pdfsubject={\thesubject},%
-               pdfauthor={Antoine~Gagn\'{e},~Mathieu~Cloutier,~Laurent~Bernier,~David~Cormier},%
+               pdfauthor={Antoine~Gagn\'{e},~Mathieu~Cloutier,~Laurent~Bernier},%
                pdfcreator={pdflatex},%
                pdfkeywords={projet~de~session,~d\'{e}veloppement~durable,~universit\'{e}}}%
 }

@@ -7,24 +7,33 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\usepackage{filecontents}
 
 % The different parameters to set the title page
 \author{%
-    Antoine Gagné \\%
-    Laurent Bernier \\%
-    Mathieu Cloutier%
+    \textsc{Bernier}, Laurent \\%
+    \textsc{Cloutier}, Mathieu \\%
+    \textsc{Gagné}, Antoine%
 }
 \title{La question}
 \subject{Le sujet de la question}
 \recipient{Le nom du professeur}
 
+\input{src/bibliographie}
+\addbibresource{bibliographie.bib}
+
 \begin{document}
 
 \chapter{This is just an example}
 \lipsum%
+Test\footcite{foo12}\footcite{test}\footcite{Poincare:1968-ORIG}
 
 \chapter{This is another example}
 \lipsum%
+Test\footcite{foo12}\footcite{test}\footcite{Poincare:1968-ORIG}
+
+\printbibliography[heading=bibintoc]%
 
 \appendix
 
