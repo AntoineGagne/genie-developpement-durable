@@ -41,13 +41,14 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[USenglish,french]{babel}
 \RequirePackage[hyphens]{url}
-\RequirePackage{amstext}         % For \text
+\RequirePackage{amstext}                                  % For \text
 \RequirePackage{array}
+\RequirePackage[backend=biber,style=authoryear]{biblatex} % For the bibliography
 \RequirePackage{caption}
 \RequirePackage{colortbl}
 \RequirePackage{etoolbox}
-\RequirePackage{fancyhdr}
-\RequirePackage{geometry}
+\RequirePackage{fancyhdr}                                 % To have header and footer
+\RequirePackage{geometry}                                 % To be able to redefine page dimensions
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
 \RequirePackage{listings}
@@ -57,9 +58,10 @@
 \RequirePackage{ragged2e}
 \RequirePackage{rotating}
 \RequirePackage{tabularx}
-\RequirePackage{textcomp}        % For \textcelsius, \textmu, \textohm
+\RequirePackage{textcomp}                                 % For \textcelsius, \textmu, \textohm
 \RequirePackage{titlesec}
 \RequirePackage{xcolor}
+\RequirePackage{xparse}                                   % A better way to define environments
 
 
 %--------------------------------------------------------------------------------------
@@ -106,7 +108,7 @@
 \let\origquotation\quotation%
 \let\endorigquotation\endquotation%
 
-\newenvironment{quoting}%
+\NewDocumentEnvironment{quoting}{mo}%
 {%
     \setlength{\leftmargin}{4cm}
     \setlength{\rightmargin}{4cm}
@@ -116,6 +118,9 @@
 }%
 {%
     \fg%
+    \IfNoValueTF{#2}%
+        {\footfullcite{#1}}%
+        {\footfullcite[#2]{#1}}%
     \endorigquotation%
 }
 
