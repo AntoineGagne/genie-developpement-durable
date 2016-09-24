@@ -104,6 +104,10 @@
                }%
                {\end{thebibliography}}
 
+% Switch the first name and the last name
+\DeclareNameAlias{sortname}{last-first}
+\DeclareNameAlias{default}{last-first}
+
 % Redefinition of the `quotation` environment
 \let\origquotation\quotation%
 \let\endorigquotation\endquotation%
