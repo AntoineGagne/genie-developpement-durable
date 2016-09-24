@@ -9,6 +9,8 @@
 \usepackage{lipsum}
 \usepackage[backend=biber,style=authoryear]{biblatex}
 \usepackage{filecontents}
+\usepackage{epigraph} % If you want to put a citation at the beginning of a chapter with the `\epigraph{}{}` command
+\usepackage{xparse}
 
 % The different parameters to set the title page
 \author{%
@@ -27,11 +29,17 @@
 
 \chapter{This is just an example}
 \lipsum%
-Test\footcite{foo12}\footcite{test}\footcite{Poincare:1968-ORIG}
+Test\footfullcite{foo12}\footfullcite{test}\footfullcite{Poincare:1968-ORIG}\footfullcite{Lutz}
+
+\begin{quoting}
+    Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn
+\end{quoting}
+
 
 \chapter{This is another example}
+\epigraph{``Parents of young organic life forms should be warned, that towels can be harmful, if swallowed in large quantities.''}{Douglas Adam}
 \lipsum%
-Test\footcite{foo12}\footcite{test}\footcite{Poincare:1968-ORIG}
+Test\footfullcite{foo12}\footfullcite{test}\footfullcite{Poincare:1968-ORIG}\footfullcite{hanham}\footfullcite[217]{schramm}
 
 \printbibliography[heading=bibintoc]%
 

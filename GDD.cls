@@ -102,6 +102,22 @@
                }%
                {\end{thebibliography}}
 
+% Redefinition of the `quotation` environment
+\let\origquotation\quotation%
+\let\endorigquotation\endquotation%
+
+\newenvironment{quoting}%
+{%
+    \setlength{\leftmargin}{4cm}
+    \setlength{\rightmargin}{4cm}
+    \footnotesize
+    \origquotation%
+    \og%
+}%
+{%
+    \fg%
+    \endorigquotation%
+}
 
 % Header and footer by default
 \pagestyle{fancy}
