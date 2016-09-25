@@ -43,7 +43,7 @@
 \RequirePackage[hyphens]{url}
 \RequirePackage{amstext}                                  % For \text
 \RequirePackage{array}
-\RequirePackage[backend=biber,style=authoryear]{biblatex} % For the bibliography
+\RequirePackage[backend=biber,style=apa, sortcites=true]{biblatex} % For the bibliography
 \RequirePackage{caption}
 \RequirePackage{colortbl}
 \RequirePackage{etoolbox}
@@ -103,6 +103,9 @@
                 \raggedright%
                }%
                {\end{thebibliography}}
+
+% Set the APA language
+\DeclareLanguageMapping{french}{french-apa}
 
 % Switch the first name and the last name
 \DeclareNameAlias{sortname}{last-first}
