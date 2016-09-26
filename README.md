@@ -21,3 +21,15 @@ L'environnement `quoting` sert lorsque des citations sont longues. L'environneme
     La citation vient ici.
 \end{quoting}
 ```
+
+## Nouvelles commandes
+
+La classe expose de nouvelles commandes.
+
+### Commande `shortquote`
+
+La commande `shortquote` est utilisée lorsqu'on a des citations courtes. Elle reçoit le texte, le code de la citation et, optionnellement, le numéro de la page de la référence en argument. On s'en sert comme suit:
+
+```TeX
+\shortquote{Je suis une citation assez courte}{<code>}[<numero de la page>]
+```

@@ -131,6 +131,20 @@
     \endorigquotation%
 }
 
+% Definition of a short quote command
+\DeclareDocumentCommand{\shortquote}{m m o}{%
+    \og%
+    #1%
+    \IfNoValueTF{#3}
+    {%
+        \footfullcite{#2}%
+    }%
+    {%
+        \footfullcite[#3]{#2}%
+    }%
+    \fg%
+}
+
 % Header and footer by default
 \pagestyle{fancy}
 \fancyhf{}
