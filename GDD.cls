@@ -188,8 +188,8 @@
             \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
             \rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
 %
-            \parbox{\textwidth}{\centering\Large\bfseries \@title} \\[5ex]
-            \parbox{\textwidth}{\centering\large\bfseries \thesubject}                 \\
+            \parbox{\textwidth}{\centering\Huge\textsc{\@title}} \\[5ex]
+            \parbox{\textwidth}{\centering\Large\textsc{\thesubject}}                 \\
 %
             \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
             \rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
