@@ -14,7 +14,7 @@ compile_pdf: bibliography
 	$(COMPILE_TEX) $(BUILD_DIR) "$(FILE).tex"
 
 bibliography: generate_aux
-	biber "$(BUILD_DIR)/$(FILE)"
+	biber -D --validate_datamodel "$(BUILD_DIR)/$(FILE)"
 
 generate_aux: create_build_dir
 	$(DRAFT_MODE) $(BUILD_DIR) "$(FILE).tex"
