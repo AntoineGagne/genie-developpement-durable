@@ -6,6 +6,17 @@ Ce dépot `git` contient le projet de session du cours *Génie et développement
 
 La bibliographie est générée par `biblatex` (voir les liens [1](https://fr.sharelatex.com/learn/Biblatex_bibliography_styles), [2](https://fr.sharelatex.com/blog/2013/07/31/getting-started-with-biblatex.html), [3](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management) et [4](http://ctan.mirror.rafal.ca/macros/latex/contrib/biblatex/doc/biblatex.pdf)). Elle utilise le style [*APA*](http://www.bibl.ulaval.ca/services/citation-de-sources/style-apa) (voir [ici](http://www.bibl.ulaval.ca/aide-a-la-recherche/documents-d-aide-a-la-redaction/citer-vos-sources) pour d'autres styles de citations). Des exemples de comment écrire des entrées dans la bibliographie ont été donné dans le fichier `src/bibliographie`.
 
+## Commandes déja existantes
+
+### Commande `epigraph`
+
+La commande `epigraph` permet de rajouter un court texte (tel qu'une citation) en dessous du nom du chapitre. Elle est utilisée comme suit:
+
+```TeX
+\chapter{Example}
+\epigraph{``Parents of young organic life forms should be warned, that towels can be harmful, if swallowed in large quantities.''}{Douglas Adam} 
+```
+
 ## Nouveaux environnements
 
 ### Création
