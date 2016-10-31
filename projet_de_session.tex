@@ -6,7 +6,6 @@
 \documentclass[12pt]{GDD}
 
 \usepackage[utf8]{inputenc}
-\usepackage{lipsum}
 \usepackage{filecontents}
 \usepackage{epigraph} % If you want to put a citation at the beginning of a chapter with the `\epigraph{}{}` command
 
@@ -24,27 +23,10 @@
 \addbibresource{bibliographie.bib}
 
 \begin{document}
+    \input{src/introduction}
+    \input{src/demarche_critique}
+    \input{src/analyse}
+    \input{src/conclusion}
 
-\chapter{This is just an example}
-\lipsum%
-\shortquote{This is a short quote}{hanham}[12--13]
-Test\footfullcite{foo12}\footfullcite{test}\footfullcite{Poincare:1968-ORIG}\footfullcite{Lutz}
-
-\begin{quoting}{hanham}[12]
-    Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn Damn
-\end{quoting}
-
-
-\chapter{This is another example}
-\epigraph{``Parents of young organic life forms should be warned, that towels can be harmful, if swallowed in large quantities.''}{Douglas Adam}
-\lipsum%
-Test\footfullcite{foo12}\footfullcite{test}\footfullcite{Poincare:1968-ORIG}\footfullcite{hanham}\footfullcite[217]{schramm}
-
-\printbibliography[heading=bibintoc]%
-
-\appendix
-
-\chapter{This is an example of an appendix}
-\lipsum%
-
+    \printbibliography[heading=bibintoc]%
 \end{document}
