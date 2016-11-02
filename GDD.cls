@@ -114,10 +114,8 @@
        {\ifthenelse{\iffieldundef{abstracturl}\AND\iffieldundef{abstractloc}}
          {}
          {\printtext{\bibcpstring{abstract}}\addspace}%
-          \printtext{\bibstring{retrieved}}%
+          \printtext{Disponible \`{a}~:}%
           \setunit{\addspace}%
-          \printtext{\bibstring{from}}%
-          \setunit*{\addspace}%
           \printfield{urldescription}%
           \setunit*{\addcolon\addspace}%
           \iffieldundef{url}{}{\printfield{url}\renewcommand*{\finentrypunct}{\relax}}%
@@ -125,7 +123,7 @@
           \iffieldundef{abstracturl}{}{\printfield{abstracturl}\renewcommand*{\finentrypunct}{\relax}}
           \iffieldundef{urlyear}
             {}
-            {\printtext{(consult\'{e}e le}%
+            {\printtext{(consult\'{e} le}%
              \setunit*{\addspace}%
              \printurldate%
              \printtext{)}%
