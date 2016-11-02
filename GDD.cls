@@ -107,6 +107,32 @@
 % Set the APA language
 \DeclareLanguageMapping{french}{french-apa}
 
+% Redefines the macro to print the `urldate` field
+\renewbibmacro*{url+urldate}{%
+     \ifthenelse{\(\iffieldundef{url}\AND\iffieldundef{abstracturl}\AND\iffieldundef{abstractloc}\)\OR\NOT\iffieldundef{doi}}
+       {}
+       {\ifthenelse{\iffieldundef{abstracturl}\AND\iffieldundef{abstractloc}}
+         {}
+         {\printtext{\bibcpstring{abstract}}\addspace}%
+          \printtext{\bibstring{retrieved}}%
+          \setunit{\addspace}%
+          \printtext{\bibstring{from}}%
+          \setunit*{\addspace}%
+          \printfield{urldescription}%
+          \setunit*{\addcolon\addspace}%
+          \iffieldundef{url}{}{\printfield{url}\renewcommand*{\finentrypunct}{\relax}}%
+          \iffieldundef{abstractloc}{}{\printfield{abstractloc}\renewcommand*{\finentrypunct}{\relax}}
+          \iffieldundef{abstracturl}{}{\printfield{abstracturl}\renewcommand*{\finentrypunct}{\relax}}
+          \iffieldundef{urlyear}
+            {}
+            {\printtext{(consult\'{e}e le}%
+             \setunit*{\addspace}%
+             \printurldate%
+             \printtext{)}%
+            }%
+       }
+}
+
 % Switch the first name and the last name
 \DeclareNameAlias{sortname}{last-first}
 \DeclareNameAlias{default}{last-first}
