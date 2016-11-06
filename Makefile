@@ -1,24 +1,16 @@
 BUILD_DIR=build
-FILE=projet_de_session
+FILE_SRC=projet_de_session.tex
 SHELL=/bin/sh
 
-DRAFT_MODE=pdflatex -draftmode -output-directory
-COMPILE_TEX=pdflatex -output-directory
+COMPILE_TEX := latexmk -pdf -output-directory=$(BUILD_DIR)
 
 .SUFFIXES: .bib .pdf .tex
+.PHONY: all create_build_dir clean check compile_pdf
 
 all: compile_pdf
 
-compile_pdf: bibliography
-	$(DRAFT_MODE) $(BUILD_DIR) "$(FILE).tex"
-	$(COMPILE_TEX) $(BUILD_DIR) "$(FILE).tex"
-
-bibliography: generate_aux
-	biber -D --validate_datamodel "$(BUILD_DIR)/$(FILE)"
-
-generate_aux: create_build_dir
-	$(DRAFT_MODE) $(BUILD_DIR) "$(FILE).tex"
-	$(DRAFT_MODE) $(BUILD_DIR) "$(FILE).tex"
+compile_pdf: create_build_dir
+	$(COMPILE_TEX) $(notdir $(FILE_SRC))
 
 create_build_dir:
 	mkdir -p $(BUILD_DIR)
