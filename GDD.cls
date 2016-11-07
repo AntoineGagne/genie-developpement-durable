@@ -176,6 +176,11 @@
     \fg%
 }
 
+% Definition of a quotify
+\DeclareDocumentCommand{\quotify}{m}{%
+    \og{}#1\fg{}%
+}
+
 % Header and footer by default
 \pagestyle{fancy}
 \fancyhf{}

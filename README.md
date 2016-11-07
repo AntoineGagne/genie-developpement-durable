@@ -44,3 +44,11 @@ La commande `shortquote` est utilisée lorsqu'on a des citations courtes. Elle r
 ```TeX
 \shortquote{Je suis une citation assez courte}{<code>}[<numero de la page>]
 ```
+
+### Commande `quotify`
+
+La commande `quotify` est utilisée lorsqu'on veut mettre quelque chose entre guillemets français. Elle reçoit le texte ou le mot à mettre entre guillemets français. On s'en sert comme suit:
+
+```TeX
+\quotify{Je suis entre guillemets français.}
+```
