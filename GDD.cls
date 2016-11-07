@@ -43,7 +43,14 @@
 \RequirePackage[hyphens]{url}
 \RequirePackage{amstext}                                  % For \text
 \RequirePackage{array}
-\RequirePackage[backend=biber,style=apa, sortcites=true, sorting=nty, isbn=true]{biblatex} % For the bibliography
+\RequirePackage[backend=biber,%
+                style=apa,%
+                sortcites=true,%
+                sorting=nty,%
+                isbn=true,%
+                url=true,%
+                urldate=long%
+               ]{biblatex} % For the bibliography
 \RequirePackage{caption}
 \RequirePackage{colortbl}
 \RequirePackage{etoolbox}
