@@ -49,7 +49,7 @@
                 sorting=nty,%
                 isbn=true,%
                 url=true,%
-                urldate=long%
+                urldate=long,%
                ]{biblatex} % For the bibliography
 \RequirePackage{caption}
 \RequirePackage{colortbl}
@@ -138,6 +138,23 @@
        }
 }
 
+% Declare a new command to create footnote quote
+\DeclareCiteCommand{\wcite}
+    [\mkbibfootnote]
+    {\usebibmacro{cite:init}%
+     \usebibmacro{prenote}%
+    }
+    {\usebibmacro{citeindex}%
+     \usebibmacro{author}%
+     \setunit{\addcomma\addspace}
+     \printfield{title}%
+     }
+    {}
+    {\usebibmacro{postnote}%
+     \usebibmacro{cite:post}
+    }
+
+
 % Switch the first name and the last name
 \DeclareNameAlias{sortname}{last-first}
 \DeclareNameAlias{default}{last-first}
@@ -156,8 +173,8 @@
 }%
 {%
     \IfNoValueTF{#2}%
-        {\footfullcite{#1}}%
-        {\footfullcite[#2]{#1}}%
+        {\wcite{#1}}%
+        {\wcite[#2]{#1}}%
     \fg%
     \endorigquotation%
 }
@@ -168,10 +185,10 @@
     #1%
     \IfNoValueTF{#3}
     {%
-        \footfullcite{#2}%
+        \wcite{#2}%
     }%
     {%
-        \footfullcite[#3]{#2}%
+        \wcite[#3]{#2}%
     }%
     \fg%
 }
