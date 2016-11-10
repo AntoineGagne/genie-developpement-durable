@@ -52,3 +52,7 @@ La commande `quotify` est utilisée lorsqu'on veut mettre quelque chose entre gu
 ```TeX
 \quotify{Je suis entre guillemets français.}
 ```
+
+### Commande `wcite`
+
+La commande `wcite` est utilisée lorsqu'on veut citer quelque chose et avoir la source en note de bas de page. Elle reçoit le code de la citation et, optionnellement, le numéro de la page de la référence en argument.
