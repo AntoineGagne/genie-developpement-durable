@@ -55,4 +55,8 @@ La commande `quotify` est utilisée lorsqu'on veut mettre quelque chose entre gu
 
 ### Commande `wcite`
 
-La commande `wcite` est utilisée lorsqu'on veut citer quelque chose et avoir la source en note de bas de page. Elle reçoit le code de la citation et, optionnellement, le numéro de la page de la référence en argument.
+La commande `wcite` est utilisée lorsqu'on veut citer quelque chose et avoir la source en note de bas de page. Elle reçoit le code de la citation et, optionnellement, le numéro de la page de la référence en argument. On s'en sert comme suit:
+
+```TeX
+\wcite{<code>}{<numero de la page>}
+```
